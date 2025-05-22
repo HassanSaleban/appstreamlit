@@ -54,6 +54,10 @@ with st.sidebar:
         "Choose a shipping method",  # Titre de la question
         ("Standard (5-15 days)", "Express (2-5 days)")  # Choix proposés
     )
+    add_selectbox = st.sidebar.selectbox(
+    "How would you like to be contacted?", # Question affichée
+    ("Email", "Home phone", "Mobile phone") # Options proposées
+)
 
 import streamlit as st
 from streamlit_authenticator import Authenticate
