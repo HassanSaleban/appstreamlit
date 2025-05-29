@@ -57,4 +57,5 @@ urllib3==2.4.0
 watchdog==6.0.0
 xyzservices==2025.4.0
 folium==0.15.1
+streamlit-folium==0.18.0
 
