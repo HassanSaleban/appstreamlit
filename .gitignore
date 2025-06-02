@@ -1,5 +1,5 @@
 # 🔒 Fichier de configuration sécurisé
-.streamlit/secrets.toml
+secrets.toml
 
 # 🧪 Environnement Python local
 .env
