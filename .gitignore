@@ -1,0 +1,17 @@
+# 🔒 Fichier de configuration sécurisé
+.streamlit/secrets.toml
+
+# 🧪 Environnement Python local
+.env
+*.env
+
+# 💻 Caches locaux
+__pycache__/
+*.py[cod]
+
+# 📦 Dossiers souvent inutiles dans Git
+*.log
+*.sqlite
+*.db
+.DS_Store
+.vscode/
