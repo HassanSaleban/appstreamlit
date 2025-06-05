@@ -1,4 +1,4 @@
-# Application Web : Parcs et Jardins de Bruxelles
+# Application Web : Parcs et Jardins de Bruxelles (https://parcsbxl.streamlit.app)
 
 Cette application web interactive permet de visualiser et d'explorer les parcs et jardins de Bruxelles à l’aide de données ouvertes, tout en intégrant des fonctionnalités de cartographie, d’authentification et de recherche de contenus multimédias.
 
