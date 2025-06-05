@@ -6,7 +6,7 @@ from streamlit_folium import st_folium
 from streamlit_option_menu import option_menu
 from streamlit_authenticator import Authenticate
 
-API_KEY = 
+API_KEY = st.secrets["api"]["youtube_key"]
 st.title("Bienvenue sur l'application des parcs et jardins de Bruxelles 🌳")
 
 # Authentification
