@@ -61,3 +61,8 @@ streamlit-authenticator==0.4.2
 streamlit-option-menu==0.4.0
 pandas
 requests
+```
+
+### Configuration de la clé API YouTube
+
+Pour que la recherche de vidéos fonctionne, renseignez votre clé API dans un fichier `secrets.toml` ou via la variable d'environnement `YOUTUBE_API_KEY`.

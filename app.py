@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import pandas as pd
 import requests
@@ -6,7 +7,11 @@ from streamlit_folium import st_folium
 from streamlit_option_menu import option_menu
 from streamlit_authenticator import Authenticate
 
-API_KEY = st.secrets["api"]["youtube_key"]
+# Récupération de la clé API YouTube depuis les secrets ou les variables
+# d'environnement pour éviter une erreur si le fichier secrets.toml est absent
+API_KEY = st.secrets.get("api", {}).get("youtube_key")
+if not API_KEY:
+    API_KEY = os.getenv("YOUTUBE_API_KEY", "")
 st.title("Bienvenue sur l'application des parcs et jardins de Bruxelles 🌳")
 
 # Authentification
@@ -108,6 +113,8 @@ elif selection == "Parcs et jardins de Bruxelles":
             return None, None
 
         def chercher_video_youtube(lieu, api_key):
+            if not api_key:
+                return None
             lat, lon = API_address(lieu)
             params = {
                 "part": "snippet",
@@ -130,6 +137,8 @@ elif selection == "Parcs et jardins de Bruxelles":
             video_url = chercher_video_youtube(lieu_select, API_KEY)
             if video_url:
                 st.video(video_url)
+            elif not API_KEY:
+                st.error("Clé API YouTube manquante.")
             else:
                 st.warning("Aucune vidéo trouvée pour ce lieu.")
     
